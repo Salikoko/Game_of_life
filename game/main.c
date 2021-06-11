@@ -5,11 +5,12 @@ int main (int argc, char *argv[]) {
 	int	board[SCREEN_WIDTH][SCREEN_HEIGHT], i;
 
 	create2dtable (board);
-
-	for (i=0; i<2; i++) {
+	print (board);
+	for (i=0; i<10; i++) {
         puts("\n");
-		print (board);
 		startGeneration (board);
+		sleep(4);
+		print(board);
 		puts ("\n");
 	}
 }

@@ -5,6 +5,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<unistd.h>
 #include<SDL/SDL.h>
 #define RESET   "\033[0m"       ///<Reset color to default
 #define RED     "\033[31m"      ///< Red color 
