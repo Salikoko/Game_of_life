@@ -61,7 +61,13 @@ int rowCorrection (int c, int a) {
 	return c;
 }
 
-///caclulate number of live cells around given one 
+/**
+ * caclulate number of live cells around given one 
+ * @param[in] table2d
+ * @param[in] cell_indexes
+ * @param[out] Total_live_adjucted_cells
+ * 
+ */
 
 int neighbourCheck (int board[][SCREEN_HEIGHT], int i, int j) {
 	int	k, l, liveCells;
