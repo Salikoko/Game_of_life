@@ -1,5 +1,23 @@
-#include"life.h"
 
+
+
+
+
+/**
+ * @file life.c
+ * This file contains code to creat the game board and create new 
+ * generations depending on the game rules
+ * @mainpage
+ * This is doxygen generated documentation for the game of life project developed by team of 2:
+ * Sabir Khanlarov,Tamilla Gambarova. 
+ * Check files  menu to see more documentation.
+ */
+
+
+
+
+#include"life.h"
+///creates template for the game 
 void create2dtable (int board[][SCREEN_HEIGHT]) {
 	int	i, j;
     srand(time(0));
@@ -8,7 +26,12 @@ void create2dtable (int board[][SCREEN_HEIGHT]) {
 }
 
 
-
+/**
+ * Count adjacent live cells moving in x direction
+ * @param[in] shift_number
+ * @param[in] cell_index
+ * @param[out] number_of_live_cells
+ */
 int columnCorrection (int c, int a) {  //check adjacent cell location properly
 	c += a;
     //if adjacent cell goes beyond table's left edge
@@ -23,8 +46,14 @@ int columnCorrection (int c, int a) {  //check adjacent cell location properly
 	return c;
 }
 
-/* add to a height index, wrapping around */
 
+
+/**
+ * Count adjacent live cells moving in y direction
+ * @param[in] shift_number
+ * @param[in] cell_index
+ * @param[out] number_of_live_cells
+ */
 int rowCorrection (int c, int a) {
 	c += a;
 	while (c < 0) c += SCREEN_HEIGHT;
@@ -32,7 +61,7 @@ int rowCorrection (int c, int a) {
 	return c;
 }
 
-//caclulate number of live cells around given one 
+///caclulate number of live cells around given one 
 
 int neighbourCheck (int board[][SCREEN_HEIGHT], int i, int j) {
 	int	k, l, liveCells;
@@ -47,7 +76,7 @@ int neighbourCheck (int board[][SCREEN_HEIGHT], int i, int j) {
 	return liveCells;
 }
 
-//function to check current board and create next generation
+///function to check current board and create next generation
 void startGeneration (int board[][SCREEN_HEIGHT]) {  
 
 	int	i, j, f; 
@@ -75,7 +104,7 @@ void startGeneration (int board[][SCREEN_HEIGHT]) {
 }
 
 
-
+///function to print the board
 void print (int board[][SCREEN_HEIGHT]) {  //print 2d table 
 	int	i, j;
 

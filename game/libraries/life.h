@@ -1,13 +1,16 @@
-
+/**
+ * @file life.h
+ * Header file for our project containing macros and functions prototypes
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include<SDL/SDL.h>
-#define RESET   "\033[0m"       /* Reset color to default*/
-#define RED     "\033[31m"      /* Red color */
-#define GREEN   "\033[32m"      /* Green color */
-#define YELLOW  "\033[33m"      /* Yellow color */
-#define BLUE    "\033[34m"      /* Blue color */
+#define RESET   "\033[0m"       ///<Reset color to default
+#define RED     "\033[31m"      ///< Red color 
+#define GREEN   "\033[32m"      ///< Green color 
+#define YELLOW  "\033[33m"      ///< Yellow color 
+#define BLUE    "\033[34m"      ///< Blue color 
 
 /* size of the screen */
 
